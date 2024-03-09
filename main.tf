@@ -26,8 +26,8 @@ module "Jenkins_sg" {
 
   ingress_with_cidr_blocks = [
     {
-      from_port   = 8080
-      to_port     = 8080
+      from_port   = 80
+      to_port     = 80
       protocol    = "tcp"
       description = "http"
       cidr_blocks = "0.0.0.0/0"
