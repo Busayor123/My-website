@@ -3,7 +3,7 @@ module "vpc" {
 
   name                 = "jenkins-vpc"
   cidr                 = var.vpc_cidr
-  public_subnets     = var.public_subnets
+  public_subnets       = var.public_subnets
   enable_dns_hostnames = true
   azs                  = data.aws_availability_zones.AZS.names
 
