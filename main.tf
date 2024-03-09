@@ -59,7 +59,7 @@ module "ec2_instance" {
   name = "Jenkins-server"
 
   instance_type               = "t2.micro"
-  key_name                    = "my key_pair"
+  key_name                    = "key_pair"
   monitoring                  = true
   vpc_security_group_ids      = [module.Jenkins_sg.security_group_id]
   subnet_id                   = module.vpc.public_subnets[0]
