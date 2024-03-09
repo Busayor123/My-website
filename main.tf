@@ -3,7 +3,7 @@ module "vpc" {
 
   name                 = "jenkins-vpc"
   cidr                 = var.vpc_cidr
-  public_subnets       = var.public_subnets
+  public_subnets     = var.public_subnets
   enable_dns_hostnames = true
   azs                  = data.aws_availability_zones.AZS.names
 
@@ -64,7 +64,7 @@ module "ec2_instance" {
   vpc_security_group_ids      = [module.Jenkins_sg.security_group_id]
   subnet_id                   = module.vpc.public_subnets[0]
   associate_public_ip_address = true
-  user_data                   = file("install tools.sh")
+  user_data                   = file("installme.sh")
   availability_zone           = data.aws_availability_zones.AZS.names[0]
 
 

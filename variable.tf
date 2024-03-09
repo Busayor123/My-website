@@ -4,9 +4,5 @@ variable "vpc_cidr" {
 }
 
 variable "public_subnets" {
- type = string 
-}
-
-variable "" {
-  
+   type    = list(string) 
 }
